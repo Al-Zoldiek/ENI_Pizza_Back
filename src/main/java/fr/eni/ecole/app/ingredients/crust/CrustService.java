@@ -17,7 +17,9 @@ public class CrustService {
 	}
 	
 	public List<Crust> getAllCrust(){
+		System.out.println("getAllCrust()");
 		return crustRepo.findAll();
+		
 	}
 	
 }
