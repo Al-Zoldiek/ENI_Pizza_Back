@@ -33,6 +33,10 @@ public class Crust implements Serializable{
 		this.name = name;
 	}
 
+	public Crust(@NotBlank String name) {
+		super();
+		this.name = name;
+	}
 
 	public Long getId() {
 		return id;

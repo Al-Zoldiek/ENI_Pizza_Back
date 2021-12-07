@@ -10,8 +10,8 @@ public class PizzaController {
 	@Autowired
 	PizzaService pizzaServ;
 	
-	@GetMapping("/home")
-	public void home() {
-		
-	}
+//	@GetMapping("/home")
+//	public void home() {
+//		
+//	}
 }
