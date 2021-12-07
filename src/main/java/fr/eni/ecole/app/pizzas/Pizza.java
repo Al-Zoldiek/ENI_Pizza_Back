@@ -136,13 +136,5 @@ public class Pizza implements Serializable{
 		return serialVersionUID;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "Pizza [id=" + id + ", name=" + name + ", price=" + price + ", toppingsList=" + toppingsList + ", crust="
-				+ crust + ", sauce=" + sauce + "]";
-	}
-	
 	
 }

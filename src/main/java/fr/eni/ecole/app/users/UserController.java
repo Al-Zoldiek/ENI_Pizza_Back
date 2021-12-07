@@ -11,8 +11,5 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@GetMapping("/home")
-	public void home() {
-		System.out.println(userService.getUserById((long) 1));
-	}
+	
 }
