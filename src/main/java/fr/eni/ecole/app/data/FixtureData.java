@@ -1,5 +1,6 @@
 package fr.eni.ecole.app.data;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +15,8 @@ import fr.eni.ecole.app.ingredients.sauce.Sauce;
 import fr.eni.ecole.app.ingredients.sauce.SauceRepo;
 import fr.eni.ecole.app.ingredients.toppings.Topping;
 import fr.eni.ecole.app.ingredients.toppings.ToppingRepo;
+import fr.eni.ecole.app.orders.Order;
+import fr.eni.ecole.app.orders.OrderRepo;
 import fr.eni.ecole.app.pizzas.Pizza;
 import fr.eni.ecole.app.pizzas.PizzaRepo;
 
@@ -32,6 +35,9 @@ public class FixtureData {
 
 	@Autowired
 	private PizzaRepo pizzaRepository;
+	
+	@Autowired
+	private OrderRepo orderRepository;
 
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
@@ -115,6 +121,18 @@ public class FixtureData {
 				crustRepository.getById(1L), 
 				sauceRepository.getById(2L));
 		pizzaRepository.save(quatSaisons);
+		
+		List<Pizza> pizzaList = new ArrayList<Pizza>();
+		pizzaList.add(pizzaRepository.getById(1L));
+		pizzaList.add(pizzaRepository.getById(2L));
+		pizzaList.add(pizzaRepository.getById(3L));
+		Order order = new Order(
+				LocalDateTime.now(),
+				"En attente de livraison",
+				pizzaList
+				);
+		orderRepository.save(order);
+		
 	}
 
 

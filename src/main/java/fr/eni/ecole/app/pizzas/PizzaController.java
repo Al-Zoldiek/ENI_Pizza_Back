@@ -31,22 +31,22 @@ public class PizzaController {
 	
 	//Pour le formulaire des pizzas à choisir pour la commande
 	@GetMapping({"/pizzas"})
-	public List<Pizza> pizzas(){
+	public List<Pizza> getAllPizzas(){
 		return pizzaServ.getAllPizza();	
 	}
 	
 	@GetMapping("/pizza/{pizzaId}")
-	public Pizza pizza(@PathVariable("pizzaId") Long pizzaId) {
+	public Pizza getPizzaById(@PathVariable("pizzaId") Long pizzaId) {
 		return pizzaServ.getPizzaById(pizzaId);
 	}
 	
 	@PostMapping("/create-pizza")
-	public void pizzaCreation(@RequestBody Pizza pizza)  {
+	public void createPizza(@RequestBody Pizza pizza)  {
 		pizzaServ.addPizza(pizza);
 	} 
 	
 	@PostMapping("/delete-pizza")
-	public void removePizzaById(@RequestBody Pizza pizza) {
-		pizzaServ.removePizza(pizza);
+	public void deletePizza(@RequestBody Pizza pizza) {
+		pizzaServ.deletePizza(pizza);
 	}
 }

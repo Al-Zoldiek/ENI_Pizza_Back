@@ -24,11 +24,11 @@ public class PizzaService {
 		pizzaRepo.save(pizza);
 	}
 	
-	public void removePizza(Pizza pizza) {
+	public void deletePizza(Pizza pizza) {
 		pizzaRepo.delete(pizza);
 	}
 	
-	public void removePizzaById(Long pizzaId) {
+	public void deletePizzaById(Long pizzaId) {
 		pizzaRepo.deleteById(pizzaId);
 	}
 
