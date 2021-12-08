@@ -41,6 +41,7 @@ public class Order implements Serializable{
 		this.status = status;
 		this.pizzasList = pizzasList;
 	}
+	
 
 	public Order(Long id,LocalDateTime date, @NotBlank String status, ArrayList<Pizza> pizzasList) {
 		super();

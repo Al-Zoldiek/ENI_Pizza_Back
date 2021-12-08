@@ -12,12 +12,18 @@ public class OrderService {
 	OrderRepo orderRepo;
 	//A lier à un seul utilisateur
 	//il faudra mettre une List<Order> dans User (plus tard)
-	public List<Order> getAllOrder(){
+	public List<Order> getAllOrders(){
 		System.out.println("getAllOrder()");
 		return orderRepo.findAll();
 	}
 
-	public void addOrder(Order order) {
+	public void createOrder(Order order) {
 		orderRepo.save(order);
 	}
+	
+	public void deleteOrder(Order order) {
+		orderRepo.delete(order);
+	}
+	
+	
 }
