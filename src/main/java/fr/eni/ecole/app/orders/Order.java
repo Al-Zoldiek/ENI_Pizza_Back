@@ -36,6 +36,13 @@ public class Order implements Serializable{
 	@ManyToMany	
 	private List<Pizza> pizzasList;
 
+	public Order(@NotBlank LocalDateTime date, @NotBlank String status, List<Pizza> pizzasList) {
+		super();
+		this.date = date;
+		this.status = status;
+		this.pizzasList = pizzasList;
+	}
+
 	public Order(Long id, @NotBlank LocalDateTime date, @NotBlank String status, ArrayList<Pizza> pizzasList) {
 		super();
 		this.id = id;

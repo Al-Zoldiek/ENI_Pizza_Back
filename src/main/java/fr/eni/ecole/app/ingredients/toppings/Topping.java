@@ -33,6 +33,15 @@ public class Topping implements Serializable{
 		super();
 	}
 
+	
+	public Topping(@NotBlank String name, @NotBlank String category) {
+		super();
+		this.name = name;
+		this.category = category;
+	}
+
+
+
 	public Topping(Long id, @NotBlank String name, @NotBlank String category) {
 		super();
 		this.id = id;

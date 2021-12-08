@@ -24,4 +24,14 @@ public class Sauce implements Serializable{
 	
 	@NotBlank
 	private String name;
+	
+
+	public Sauce() {
+	}
+
+	public Sauce(@NotBlank String name) {
+		this.name = name;
+	}
+	
+	
 }
