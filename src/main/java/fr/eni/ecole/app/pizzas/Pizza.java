@@ -45,7 +45,17 @@ public class Pizza implements Serializable{
 	
 	public Pizza() {
 	}
-	
+		
+	public Pizza(@NotBlank String name, List<Topping> toppingsList, Crust crust, Sauce sauce) {
+		super();
+		this.name = name;
+		this.toppingsList = toppingsList;
+		this.crust = crust;
+		this.sauce = sauce;
+	}
+
+
+
 	public Pizza(@NotBlank String name, @NotBlank double price, List<Topping> toppingsList, Crust crust, Sauce sauce) {
 		this.name = name;
 		this.price = price;
