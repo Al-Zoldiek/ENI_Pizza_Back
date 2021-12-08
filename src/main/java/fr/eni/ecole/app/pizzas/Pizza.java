@@ -55,42 +55,29 @@ public class Pizza implements Serializable{
 		return id;
 	}
 
-
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-
 
 	public String getName() {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public List<Topping> getToppingsList() {
 		return toppingsList;
 	}
 
-
-
 	public void setToppingsList(List<Topping> toppingsList) {
 		this.toppingsList = toppingsList;
 	}
 
-
-
 	public Crust getCrust() {
 		return crust;
 	}
-
-
 
 	public void setCrust(Crust crust) {
 		this.crust = crust;

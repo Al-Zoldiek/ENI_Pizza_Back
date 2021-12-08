@@ -22,4 +22,8 @@ public class SauceService {
 		return sauceRepo.findAll();
 		
 	}
+	
+	public void createSauce(Sauce sauce) {
+		sauceRepo.save(sauce);
+	}
 }

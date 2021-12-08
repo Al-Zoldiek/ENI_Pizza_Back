@@ -62,14 +62,9 @@ public class PizzaController {
 	
 	//Pour pouvoir creer une pizza à partir du Front : 
 	//(Pas bon à mon avis)
-	@PostMapping("/pizza-creation/{pizzaName}/{pizzaPrice}")
-	public void pizzaCreation(
-			@PathVariable("pizzaName") String pizzaName, 
-			@PathVariable("pizzaPrice") Long pizzaPrice,
-			@RequestBody List<Topping> toppings,
-			@RequestBody Crust crust, 
-			@RequestBody Sauce sauce)  {
-		
+	@PostMapping("/pizza-creation")
+	public void pizzaCreation(@RequestBody Pizza pizza)  {
+		pizzaServ.addPizza(pizza);
 	} 
 	
 	//ou
