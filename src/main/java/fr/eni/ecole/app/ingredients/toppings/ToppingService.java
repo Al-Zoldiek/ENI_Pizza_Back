@@ -19,4 +19,8 @@ public class ToppingService {
 		System.out.println("getAllTopping()");
 		return toppingRepo.findAll();
 	}
+	
+	public void createTopping(Topping topping) {
+		toppingRepo.save(topping);
+	}
 }
