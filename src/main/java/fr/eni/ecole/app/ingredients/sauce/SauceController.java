@@ -3,13 +3,14 @@ package fr.eni.ecole.app.ingredients.sauce;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-
+@CrossOrigin(origins="*")
 @RestController
 public class SauceController {
 
@@ -29,5 +30,10 @@ public class SauceController {
 	@PostMapping("/create-sauce")
 	public void createSauce(@RequestBody Sauce sauce) {
 		sauceServ.createSauce(sauce);
+	}
+	
+	@PostMapping("/delete-sauce")
+	public void deleteSauce(@RequestBody Sauce sauce) {
+		sauceServ.deleteSauce(sauce);
 	}
 }

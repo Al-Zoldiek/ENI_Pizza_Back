@@ -22,4 +22,12 @@ public class CrustService {
 		
 	}
 	
+	public void createCrust(Crust crust) {
+		crustRepo.save(crust);
+	}
+	
+	public void deleteCrust(Crust crust) {
+		crustRepo.delete(crust);
+	}
+	
 }

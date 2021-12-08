@@ -26,4 +26,8 @@ public class SauceService {
 	public void createSauce(Sauce sauce) {
 		sauceRepo.save(sauce);
 	}
+	
+	public void deleteSauce(Sauce sauce) {
+		sauceRepo.deleteById(sauce.getId());
+	}
 }
