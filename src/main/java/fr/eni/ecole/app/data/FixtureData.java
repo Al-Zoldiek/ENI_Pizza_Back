@@ -20,6 +20,7 @@ public class FixtureData {
 		crustRepository.save(new Crust("Fine"));
 		crustRepository.save(new Crust("Epaisse"));
 		crustRepository.save(new Crust("Mozza-crust"));
+		crustRepository.save(new Crust("Classique"));
 	}
 }
 
