@@ -69,7 +69,7 @@ public class PizzaController {
 			@RequestBody List<Topping> toppings,
 			@RequestBody Crust crust, 
 			@RequestBody Sauce sauce)  {
-		pizzaServ.addPizza(new Pizza(pizzaName, pizzaPrice, toppings, crust, sauce));
+		
 	} 
 	
 	//ou

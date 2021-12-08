@@ -71,37 +71,49 @@ public class FixtureData {
 		toppingRepository.save(new Topping("Saumon","Poisson"));
 
 		ArrayList<Topping> margaTop = new ArrayList<Topping>();
-		margaTop.add(new Topping("Jambon","Viande"));
-		margaTop.add(new Topping("Mozzarella","Fromage"));
-		margaTop.add(new Topping("Champignons","Champignon"));
-		Pizza margarita = new Pizza("Margarita", margaTop, new Crust("Fine"), new Sauce("Tomate"));
+		margaTop.add(toppingRepository.getById(1L));
+		margaTop.add(toppingRepository.getById(8L));
+		margaTop.add(toppingRepository.getById(19L));
+		Pizza margarita = new Pizza("Margarita", 
+				margaTop, 
+				crustRepository.getById(1L), 
+				sauceRepository.getById(2L));
 		pizzaRepository.save(margarita);
 
 		List<Topping> canniTop = new ArrayList<Topping>();
-		canniTop.add(new Topping("Chorizo","Viande"));
-		canniTop.add(new Topping("Poivrons","Fruit"));
-		canniTop.add(new Topping("Tomates","Fruit"));
-		canniTop.add(new Topping("Jambon","Viande"));
-		canniTop.add(new Topping("Boeuf haché", "Viande"));
-		canniTop.add(new Topping("Poulet rôti", "Viande"));
-		Pizza cannibale = new Pizza("Cannibale", canniTop, new Crust("Epaisse"), new Sauce("Tomate"));
+		canniTop.add(toppingRepository.getById(3L));
+		canniTop.add(toppingRepository.getById(16L));
+		canniTop.add(toppingRepository.getById(15L));
+		canniTop.add(toppingRepository.getById(1L));
+		canniTop.add(toppingRepository.getById(5L));
+		canniTop.add(toppingRepository.getById(6L));
+		Pizza cannibale = new Pizza("Cannibale", 
+				canniTop, 
+				crustRepository.getById(2L), 
+				sauceRepository.getById(2L));
 		pizzaRepository.save(cannibale);
 
 		List<Topping> savoyTop = new ArrayList<Topping>();
-		savoyTop.add(new Topping("Pommes de terre","Féculent"));
-		savoyTop.add(new Topping("Oignon","Légume"));
-		savoyTop.add(new Topping("Lardons", "Viande"));
-		savoyTop.add(new Topping("Reblochon","Fromage"));
-		Pizza savoyarde = new Pizza("Savoyarde", savoyTop, new Crust("Epaisse"), new Sauce("Crème"));
+		savoyTop.add(toppingRepository.getById(20L));
+		savoyTop.add(toppingRepository.getById(17L));
+		savoyTop.add(toppingRepository.getById(7L));
+		savoyTop.add(toppingRepository.getById(12L));
+		Pizza savoyarde = new Pizza("Savoyarde", 
+				savoyTop, 
+				crustRepository.getById(2L), 
+				sauceRepository.getById(1L));
 		pizzaRepository.save(savoyarde);
 
 		List<Topping> quatSaisTop = new ArrayList<Topping>();
-		quatSaisTop.add(new Topping("Coeur d'artichaut","Légume"));
-		quatSaisTop.add(new Topping("Olives","Fruit"));
-		quatSaisTop.add(new Topping("Poivrons","Légume"));
-		quatSaisTop.add(new Topping("Champignons","Champignon"));
-		quatSaisTop.add(new Topping("Tomates","Fruit"));
-		Pizza quatSaisons = new Pizza("Quatre saisons", quatSaisTop, new Crust("Mozza-crust"), new Sauce("Tomate"));
+		quatSaisTop.add(toppingRepository.getById(18L));
+		quatSaisTop.add(toppingRepository.getById(14L));
+		quatSaisTop.add(toppingRepository.getById(16L));
+		quatSaisTop.add(toppingRepository.getById(19L));
+		quatSaisTop.add(toppingRepository.getById(15L));
+		Pizza quatSaisons = new Pizza("Quatre saisons", 
+				quatSaisTop, 
+				crustRepository.getById(1L), 
+				sauceRepository.getById(2L));
 		pizzaRepository.save(quatSaisons);
 	}
 

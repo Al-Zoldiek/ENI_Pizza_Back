@@ -32,9 +32,6 @@ public class Pizza implements Serializable{
 	@NotBlank
 	private String name;
 	
-	@NotBlank
-	private double price;
-	
 	@ManyToMany	
 	private List<Topping> toppingsList;
 	
@@ -53,31 +50,6 @@ public class Pizza implements Serializable{
 		this.crust = crust;
 		this.sauce = sauce;
 	}
-
-
-
-	public Pizza(@NotBlank String name, @NotBlank double price, List<Topping> toppingsList, Crust crust, Sauce sauce) {
-		this.name = name;
-		this.price = price;
-		this.toppingsList = toppingsList;
-		this.crust = crust;
-		this.sauce = sauce;
-	}
-
-
-
-	public Pizza(Long id, @NotBlank String name, @NotBlank double price, ArrayList<Topping> toppingsList, Crust crust,
-			Sauce sauce) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.price = price;
-		this.toppingsList = toppingsList;
-		this.crust = crust;
-		this.sauce = sauce;
-	}
-
-
 
 	public Long getId() {
 		return id;
@@ -100,19 +72,6 @@ public class Pizza implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
-
-	public double getPrice() {
-		return price;
-	}
-
-
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
 
 
 	public List<Topping> getToppingsList() {
