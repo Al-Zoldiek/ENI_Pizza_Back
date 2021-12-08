@@ -20,7 +20,7 @@ public class CrustController {
 		return crustServ.getCrustById(crustId); 
 	}
 	
-	@GetMapping("/crusties")
+	@GetMapping("/crusts")
 	public List<Crust> crusties() {
 		return crustServ.getAllCrust(); 
 	}

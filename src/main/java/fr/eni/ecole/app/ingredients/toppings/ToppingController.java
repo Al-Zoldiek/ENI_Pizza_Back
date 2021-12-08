@@ -28,8 +28,7 @@ public class ToppingController {
 	
 	@PostMapping("/create-topping")
 	@ResponseBody
-	public void createTopping(@RequestBody Topping topping) {
-				
+	public void createTopping(@RequestBody Topping topping) {	
 		toppingServ.createTopping(topping);
 	}
 }

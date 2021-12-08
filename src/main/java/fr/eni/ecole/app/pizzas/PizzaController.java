@@ -44,7 +44,7 @@ public class PizzaController {
 	}
 	
 	//Pour le formulaire des pizzas à choisir pour la commande
-	@GetMapping({"/pizzas-a-emporter", "/pizzas-sur-place"})
+	@GetMapping({"/pizzas"})
 	public List<Pizza> pizzas(){
 		return pizzaServ.getAllPizza();	
 	}
