@@ -23,4 +23,8 @@ public class ToppingService {
 	public void createTopping(Topping topping) {
 		toppingRepo.save(topping);
 	}
+	
+	public void deleteTopping(Topping topping) {
+		toppingRepo.delete(topping);
+	}
 }

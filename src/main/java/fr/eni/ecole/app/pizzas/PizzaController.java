@@ -29,48 +29,24 @@ public class PizzaController {
 	@Autowired
 	SauceService sauceServ;
 	
-	//Un get pour pouvoir recuperer une pizza de la bdd à partir du front avec son id
-	@GetMapping("/pizza/{pizzaId}")
-	public Pizza pizza(@PathVariable("pizzaId") Long pizzaId) {
-		return pizzaServ.getPizzaById(pizzaId);
-	}
-	
-	//Un get pour pouvoir supprimer une pizza de la bdd à partir du front avec son id
-	@GetMapping("/remove-pizza-by-id/{pizzaId}")
-	public void removePizzaById(@PathVariable("pizzaId") Long pizzaId) {
-		pizzaServ.removePizzaById(pizzaId);
-	}
-	
 	//Pour le formulaire des pizzas à choisir pour la commande
 	@GetMapping({"/pizzas"})
 	public List<Pizza> pizzas(){
 		return pizzaServ.getAllPizza();	
 	}
 	
-	//-----------------------------------------------------------
+	@GetMapping("/pizza/{pizzaId}")
+	public Pizza pizza(@PathVariable("pizzaId") Long pizzaId) {
+		return pizzaServ.getPizzaById(pizzaId);
+	}
 	
-//	//Pour le formulaire de création de la pizza. 
-//	//Comment on retourne les 3? (sauce, crust, topping)
-//	@GetMapping("/pizza-creation")
-//	public void formToppingSauceCrust() {
-//		toppingServ.getAllTopping();
-//		sauceServ.getAllSauce();
-//		crustServ.getAllCrust();
-//	}
-	
-	//Pour pouvoir creer une pizza à partir du Front : 
-	//(Pas bon à mon avis)
-	@PostMapping("/pizza-creation")
+	@PostMapping("/create-pizza")
 	public void pizzaCreation(@RequestBody Pizza pizza)  {
 		pizzaServ.addPizza(pizza);
 	} 
 	
-	//ou
-	@PostMapping("/pizza-creation2")
-	public ResponseEntity<Pizza> pizzaCreation2(@RequestBody Pizza yourPizza) {
-		pizzaServ.addPizza(yourPizza);
-		return new ResponseEntity<Pizza>(yourPizza, HttpStatus.CREATED);
+	@PostMapping("/delete-pizza")
+	public void removePizzaById(@RequestBody Pizza pizza) {
+		pizzaServ.removePizza(pizza);
 	}
-	
-	
 }

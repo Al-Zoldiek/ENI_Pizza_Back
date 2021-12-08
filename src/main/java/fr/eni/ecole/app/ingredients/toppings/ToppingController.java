@@ -33,4 +33,9 @@ public class ToppingController {
 	public void createTopping(@RequestBody Topping topping) {	
 		toppingServ.createTopping(topping);
 	}
+	
+	@PostMapping("/delete-topping")
+	public void deleteTopping(@RequestBody Topping topping) {
+		toppingServ.deleteTopping(topping);
+	}
 }

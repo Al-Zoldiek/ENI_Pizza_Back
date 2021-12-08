@@ -20,12 +20,12 @@ public class PizzaService {
 		return pizzaRepo.findAll();
 	}
 	
-	public void addPizza(Pizza votrePizza) {
-		pizzaRepo.save(votrePizza);
+	public void addPizza(Pizza pizza) {
+		pizzaRepo.save(pizza);
 	}
 	
-	public void removePizza(Pizza votrePizza) {
-		pizzaRepo.delete(votrePizza);
+	public void removePizza(Pizza pizza) {
+		pizzaRepo.delete(pizza);
 	}
 	
 	public void removePizzaById(Long pizzaId) {
