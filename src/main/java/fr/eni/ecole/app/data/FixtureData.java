@@ -90,17 +90,15 @@ public class FixtureData {
 		toppingRepository.save(new Topping("Pommes de terre","Légumes")); //29
 		toppingRepository.save(new Topping("Piments","Légumes")); //30
 		
-		toppingRepository.save(new Topping("Pesto","Assaisonnement")); //31
-		toppingRepository.save(new Topping("Miel","Assaisonnement")); //32
-		toppingRepository.save(new Topping("Chimichurri","Assaisonnement")); //33
-		toppingRepository.save(new Topping("Harissa","Assaisonnement")); //34
-		toppingRepository.save(new Topping("Tabasco","Assaisonnement")); //35
-		toppingRepository.save(new Topping("Sauce samourai","Assaisonnement")); //36
-		toppingRepository.save(new Topping("Huile de truffe","Assaisonnement")); //37
-		toppingRepository.save(new Topping("Origan","Assaisonnement")); //38
-		toppingRepository.save(new Topping("Basilique","Assaisonnement")); //39
-		toppingRepository.save(new Topping("Thym","Assaisonnement")); //40
-		
+		toppingRepository.save(new Topping("Pesto","Assaisonnement")); //31		
+		toppingRepository.save(new Topping("Chimichurri","Assaisonnement")); //32
+		toppingRepository.save(new Topping("Harissa","Assaisonnement")); //33
+		toppingRepository.save(new Topping("Tabasco","Assaisonnement")); //34
+		toppingRepository.save(new Topping("Huile de truffe","Assaisonnement")); //35
+		toppingRepository.save(new Topping("Origan","Assaisonnement")); //36
+		toppingRepository.save(new Topping("Basilic","Assaisonnement")); //37
+		toppingRepository.save(new Topping("Thym","Assaisonnement")); //38
+	
 		ArrayList<Topping> margaTop = new ArrayList<Topping>();
 		margaTop.add(toppingRepository.getById(23L));
 		margaTop.add(toppingRepository.getById(14L));
