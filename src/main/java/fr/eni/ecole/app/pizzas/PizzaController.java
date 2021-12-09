@@ -3,6 +3,7 @@ package fr.eni.ecole.app.pizzas;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -47,6 +48,11 @@ public class PizzaController {
 	
 	@PostMapping("/delete-pizza")
 	public void deletePizza(@RequestBody Pizza pizza) {
-		pizzaServ.deletePizza(pizza);
+		try {
+			pizzaServ.deletePizza(pizza);
+		} catch (DataIntegrityViolationException exception) {
+			System.err.println("Impossible de supprimer cette pizza ! Des commandes contenant celle-ci sont en cours.");
+		}
+		
 	}
 }

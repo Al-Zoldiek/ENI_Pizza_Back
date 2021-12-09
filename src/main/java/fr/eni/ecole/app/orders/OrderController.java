@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,7 +33,13 @@ public class OrderController {
 	
 	@PostMapping("/delete-order")
 	public void deleteOrder(@RequestBody Order order) {
-		orderServ.deleteOrder(order);
+		try {
+			orderServ.deleteOrder(order);
+		} catch (DataIntegrityViolationException exception) {
+			System.err.println("Impossible de supprimer cette commande !");
+		}
+		
+		
 	}
 	
 	
