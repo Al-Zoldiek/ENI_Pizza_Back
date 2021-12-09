@@ -56,13 +56,14 @@ public class FixtureData {
 		sauceRepository.save(new Sauce("Crème"));
 		sauceRepository.save(new Sauce("Tomate"));
 
-		toppingRepository.save(new Topping("Jambon","Viande"));
-		toppingRepository.save(new Topping("Jambon cru","Viande"));
-		toppingRepository.save(new Topping("Chorizo","Viande"));
-		toppingRepository.save(new Topping("Saucisses","Viande"));
-		toppingRepository.save(new Topping("Boeuf haché", "Viande"));
-		toppingRepository.save(new Topping("Poulet rôti", "Viande"));
-		toppingRepository.save(new Topping("Lardons", "Viande"));
+		toppingRepository.save(new Topping("Jambon","Animal"));
+		toppingRepository.save(new Topping("Jambon cru","Animal"));
+		toppingRepository.save(new Topping("Chorizo","Animal"));
+		toppingRepository.save(new Topping("Saucisses","Animal"));
+		toppingRepository.save(new Topping("Boeuf haché", "Animal"));
+		toppingRepository.save(new Topping("Poulet rôti", "Animal"));
+		toppingRepository.save(new Topping("Lardons", "Animal"));
+		toppingRepository.save(new Topping("Saumon","Animal"));
 		
 		toppingRepository.save(new Topping("Mozzarella","Fromage"));
 		toppingRepository.save(new Topping("Emmental","Fromage"));
@@ -70,19 +71,16 @@ public class FixtureData {
 		toppingRepository.save(new Topping("Bleu","Fromage"));
 		toppingRepository.save(new Topping("Reblochon","Fromage"));
 		
-		toppingRepository.save(new Topping("Ananas","Fruit"));
-		toppingRepository.save(new Topping("Olives","Fruit"));
-		toppingRepository.save(new Topping("Tomates","Fruit"));
+		toppingRepository.save(new Topping("Ananas","Végétal"));
+		toppingRepository.save(new Topping("Olives","Végétal"));
+		toppingRepository.save(new Topping("Tomates","Végétal"));		
+		toppingRepository.save(new Topping("Poivrons","Végétal"));
+		toppingRepository.save(new Topping("Oignon","Végétal"));
+		toppingRepository.save(new Topping("Coeur d'artichaut","Végétal"));		
+		toppingRepository.save(new Topping("Champignons","Végétal"));		
+		toppingRepository.save(new Topping("Pommes de terre","Végétal"));
 		
-		toppingRepository.save(new Topping("Poivrons","Légume"));
-		toppingRepository.save(new Topping("Oignon","Légume"));
-		toppingRepository.save(new Topping("Coeur d'artichaut","Légume"));
 		
-		toppingRepository.save(new Topping("Champignons","Champignon"));
-		
-		toppingRepository.save(new Topping("Pommes de terre","Féculent"));
-		
-		toppingRepository.save(new Topping("Saumon","Poisson"));
 
 		ArrayList<Topping> margaTop = new ArrayList<Topping>();
 		margaTop.add(toppingRepository.getById(1L));
