@@ -1,11 +1,13 @@
 package fr.eni.ecole.app.users;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
-import lombok.Data;
+import fr.eni.ecole.app.orders.Order;
 
 @Entity
 public class User {
@@ -15,6 +17,14 @@ public class User {
 	private Long id;
 	
 	private String name;
+	
+	@OneToOne
+	private Order order;
+	
+	public User(String name) {
+		super();
+		this.name = name;
+	}
 
 	public User(Long id, String name) {
 		super();

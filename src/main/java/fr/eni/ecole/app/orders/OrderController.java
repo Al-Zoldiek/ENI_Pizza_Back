@@ -22,10 +22,6 @@ public class OrderController {
 		return orderServ.getAllOrders();
 	}
 	
-	//---------------------------------------------------------------------------
-	
-	//ici, pas sur que ce soit bon, il faudra peut être recuperer une liste de pizza, une date et un status
-	//pour creer l'order
 	@PostMapping("/create-order")
 	public void createOrder(@RequestBody Order order) {
 		if(order.getDate() == null) {

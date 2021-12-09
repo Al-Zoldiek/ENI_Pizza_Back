@@ -19,6 +19,8 @@ import fr.eni.ecole.app.orders.Order;
 import fr.eni.ecole.app.orders.OrderRepo;
 import fr.eni.ecole.app.pizzas.Pizza;
 import fr.eni.ecole.app.pizzas.PizzaRepo;
+import fr.eni.ecole.app.users.User;
+import fr.eni.ecole.app.users.UserRepo;
 
 @Component
 public class FixtureData {
@@ -38,9 +40,15 @@ public class FixtureData {
 	
 	@Autowired
 	private OrderRepo orderRepository;
+	
+	@Autowired
+	private UserRepo userRepository;
 
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
+		
+		User userErwan = userRepository.save(new User("Erwan"));
+		
 		crustRepository.save(new Crust("Fine"));
 		crustRepository.save(new Crust("Epaisse"));
 		crustRepository.save(new Crust("Mozza-crust"));
@@ -129,7 +137,8 @@ public class FixtureData {
 		Order order = new Order(
 				LocalDateTime.now(),
 				"En attente de livraison",
-				pizzaList
+				pizzaList,
+				userErwan
 				);
 		orderRepository.save(order);
 		
