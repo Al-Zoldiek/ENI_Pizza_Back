@@ -102,7 +102,7 @@ public class FixtureData {
 		ArrayList<Topping> margaTop = new ArrayList<Topping>();
 		margaTop.add(toppingRepository.getById(23L));
 		margaTop.add(toppingRepository.getById(14L));
-		margaTop.add(toppingRepository.getById(39L));
+		margaTop.add(toppingRepository.getById(37L));
 		Pizza margarita = new Pizza("Margarita", 
 				margaTop, 
 				crustRepository.getById(1L), 
@@ -114,7 +114,7 @@ public class FixtureData {
 		reginTop.add(toppingRepository.getById(14L));
 		reginTop.add(toppingRepository.getById(22L));
 		reginTop.add(toppingRepository.getById(27L));
-		reginTop.add(toppingRepository.getById(38L));
+		reginTop.add(toppingRepository.getById(34L));
 		Pizza regina = new Pizza("Regina", 
 				reginTop, 
 				crustRepository.getById(1L), 
@@ -125,7 +125,7 @@ public class FixtureData {
 		arrabiaTop.add(toppingRepository.getById(3L));
 		arrabiaTop.add(toppingRepository.getById(24L));
 		arrabiaTop.add(toppingRepository.getById(30L));
-		arrabiaTop.add(toppingRepository.getById(35L));
+		arrabiaTop.add(toppingRepository.getById(34L));
 		Pizza arrabiata = new Pizza("Arrabiata", 
 				arrabiaTop, 
 				crustRepository.getById(2L), 
@@ -137,7 +137,6 @@ public class FixtureData {
 		canniTop.add(toppingRepository.getById(5L));
 		canniTop.add(toppingRepository.getById(6L));
 		canniTop.add(toppingRepository.getById(23L));
-		canniTop.add(toppingRepository.getById(36L));
 		Pizza cannibale = new Pizza("Cannibale", 
 				canniTop, 
 				crustRepository.getById(2L), 
@@ -183,8 +182,7 @@ public class FixtureData {
 		List<Topping> cabbriTop = new ArrayList<Topping>();
 		cabbriTop.add(toppingRepository.getById(7L));
 		cabbriTop.add(toppingRepository.getById(16L));
-		cabbriTop.add(toppingRepository.getById(32L));
-		cabbriTop.add(toppingRepository.getById(40L));
+		cabbriTop.add(toppingRepository.getById(38L));
 		Pizza cabbria = new Pizza("La Cabbria", 
 				quatSaisTop, 
 				crustRepository.getById(1L), 
@@ -228,7 +226,7 @@ public class FixtureData {
 		argenTop.add(toppingRepository.getById(5L));
 		argenTop.add(toppingRepository.getById(17L));
 		argenTop.add(toppingRepository.getById(23L));
-		argenTop.add(toppingRepository.getById(33L));
+		argenTop.add(toppingRepository.getById(32L));
 		Pizza argentina = new Pizza("Argentina", 
 				argenTop, 
 				crustRepository.getById(1L), 
