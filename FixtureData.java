@@ -98,7 +98,6 @@ public class FixtureData {
 		toppingRepository.save(new Topping("Origan","Assaisonnement")); //36
 		toppingRepository.save(new Topping("Basilic","Assaisonnement")); //37
 		toppingRepository.save(new Topping("Thym","Assaisonnement")); //38
-		toppingRepository.save(new Topping("Aneth","Assaisonnement")); //39
 	
 		ArrayList<Topping> margaTop = new ArrayList<Topping>();
 		margaTop.add(toppingRepository.getById(23L));
@@ -118,7 +117,7 @@ public class FixtureData {
 		reginTop.add(toppingRepository.getById(34L));
 		Pizza regina = new Pizza("Regina", 
 				reginTop, 
-				crustRepository.getById(2L), 
+				crustRepository.getById(1L), 
 				sauceRepository.getById(1L));
 		pizzaRepository.save(regina);
 		
@@ -148,7 +147,7 @@ public class FixtureData {
 		savoyTop.add(toppingRepository.getById(20L));
 		savoyTop.add(toppingRepository.getById(17L));
 		savoyTop.add(toppingRepository.getById(7L));
-		savoyTop.add(toppingRepository.getById(29L));
+		savoyTop.add(toppingRepository.getById(12L));
 		Pizza savoyarde = new Pizza("Savoyarde", 
 				savoyTop, 
 				crustRepository.getById(2L), 
@@ -204,8 +203,6 @@ public class FixtureData {
 		norvegTop.add(toppingRepository.getById(10L));
 		norvegTop.add(toppingRepository.getById(14L));
 		norvegTop.add(toppingRepository.getById(28L));
-		norvegTop.add(toppingRepository.getById(25L));
-		norvegTop.add(toppingRepository.getById(39L));
 		Pizza norvegienne = new Pizza("Norvegienne", 
 				norvegTop, 
 				crustRepository.getById(2L), 
@@ -288,6 +285,9 @@ public class FixtureData {
 		orderRepository.save(fourthOrder);
 		
 	}
-	
+
+
+
+
 }
 
